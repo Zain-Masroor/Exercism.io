@@ -11,4 +11,3 @@ class Lasagna(object):
 
 	def totalTimeInMinutes(x, y):
 		return preparationTimeInMinutes(x) + remainingMinutesInOven(y) # (3, 20) => 26
-
