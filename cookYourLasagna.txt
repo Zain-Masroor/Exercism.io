@@ -1,0 +1,14 @@
+class Lasagna(object):
+
+	def expectedMinutesInOven(self):
+		return 40	# => 40
+
+	def remainingMinutesInOven(x):
+		return expectedMinutesInOven(self) - x	# (28) => 12
+
+	def preparationTimeInMinutes(x):
+		return x * 2  # (2) => 4
+
+	def totalTimeInMinutes(x, y):
+		return preparationTimeInMinutes(x) + remainingMinutesInOven(y) # (3, 20) => 26
+
