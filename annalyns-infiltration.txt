@@ -1,0 +1,28 @@
+class AnnalynsInfiltration:
+	
+	def canFastAttack(knightIsAwake):
+		if(knightIsAwake) == True:
+			return False
+		return True
+
+	def canSpy(knightIsAwake, archerIsAwake, prisonerIsAwake):
+		if knightIsAwake or archerIsAwake or prisonerIsAwake == False:
+			return True
+		return False
+
+	def canSignalPrisoner(archerIsAwake, prisonerIsAwake):
+		if archerIsAwake or prisonerIsAwake == True:
+			return True
+		return False
+
+	def canFreePrisoner(knightIsAwake, archerIsAwake, prisonerIsAwake, petDogIsAwake):
+		if(knightIsAwake or archerIsAwake or prisonerIsAwake and petDogIsAwake == True):
+			return False
+		return True
+
+annalynsInfiltration = AnnalynsInfiltration()
+
+knightIsAwake = True
+
+print(annalynsInfiltration.canFastAttack(knightIsAwake)) // => false
+
