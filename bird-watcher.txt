@@ -1,0 +1,34 @@
+class BirdWatcher:
+
+	def __init__(self, lastWeek):
+        self.lastWeek = lastWeek
+
+    def getToday(self):
+        return self.lastWeek[len(self.lastWeek)-1]
+
+    def incrementTodaysCount(self):
+        todaysCount = 1 + self.lastWeek[len(self.lastWeek)-1]
+        return todaysCount
+
+    def hasDayWithoutBirds(self):
+        for x in self.lastWeek:
+            if x == 0:
+                return True
+        return False    
+        
+    def getCountForFirstDays(self, x):
+        total = 0
+        for count in range(0, x):
+            total += self.lastWeek[count]
+        return total
+
+    def getBusyDays(self):
+        count = 0
+        for x in self.lastWeek:
+            if x >= 5:
+                count += 1
+        return count;  
+
+
+bw = BirdWatcher([2, 5, 0, 7, 4, 1])
+print(bw.getBusyDays())  // => 2
