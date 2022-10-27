@@ -1,0 +1,41 @@
+class KarlsLanguages:
+
+    def __init__(self, languages):
+        self.languages = languages
+
+    
+    def isEmpty(self):
+        if self.languages == "":
+            return True
+        return False
+
+    def addLanguage(self, language):
+        return self.languages.append(language)
+
+    def removeLanguage(self, language):
+        return self.languages.remove(language)
+
+    def firstLanguage(self):
+        return self.languages.pop(0)
+
+    def count(self):
+        count = 0
+        for x in self.languages:
+            count += 1
+        return count
+
+    def containsLanguage(self, language):
+        for x in self.languages:
+            if(x == language):
+                return True
+        return False    
+
+    def isExciting(self):
+        if(self.containsLanguage("Java") and self.containsLanguage("Kotlin")):
+            return True
+        return False
+            
+    
+    
+kl = KarlsLanguages(["Java", "Ruby", "Assembly", "Jenkins", "JavaScript", "R"])
+print(kl.languages)
